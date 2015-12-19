@@ -2,6 +2,12 @@
 	<div class='container'>
 		<div class='navigation'>
 			<% if signed_in? %>
+				<% if current_user.admin? %>
+					<%= link_to '/admin' do %>
+						<i class="fa fa-home"></i>
+						Admin
+					<% end %>
+				<% end %>
 			 	<%= link_to edit_user_registration_path do%>
 			 		<i class="fa fa-user"></i>
 			 		<%= current_user.email %>

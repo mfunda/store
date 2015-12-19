@@ -4,6 +4,10 @@
 			<%= link_to 'Add Product', new_product_path, class: 'price' %>
 		<% end %>
 	<% end %>
+	<%= form_tag products_path, :method => 'get' do %>
+		<%= text_field_tag :search, params[:search] %>
+		<%= submit_tag "Search", class: "price" %>
+	<% end %>
 <h1>Listing Products</h1>
     <% @products.each do |product| %>
       <div class='product-table'>

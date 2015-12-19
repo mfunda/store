@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'carts/show'
 
   devise_for :users, path_name: {sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
