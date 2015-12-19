@@ -1,5 +1,5 @@
 <div class="owl-carousel">
-	<% Product.all.order("created_at DESC").each do |p| %>
+	<% Product.order("created_at DESC").first(10).each do |p| %>
 		<%= image_tag p.avatar.url %>
 
 	<% end %>

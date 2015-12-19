@@ -82,6 +82,13 @@ footer {
 	color: #fff;
 	text-align: right;
 	clear: both;
+	margin: 0;
+	padding: 0;
+}
+
+footer .container p {
+	margin: 0;
+	padding: 15px 0;
 }
 
 .product-table {
@@ -188,4 +195,32 @@ footer {
 .prod-belongs img {
 	height: 300px;
 	width: 300px;
+}
+
+#navbutton {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin-bottom: 50px;
+	margin-right: 30px;	
+	display: none;
+	opacity: 0.8;
+}
+
+#navbutton:hover {
+	font-size: 55px;
+}
+
+.next_page, .previous_page {
+	border-radius: 3px;
+	display: inline-block;
+	margin-bottom: auto;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	padding: 3px;
+	font-size: 12px;
+	margin: 10px;
+	background-color: #008CBA;
+	color: #FFF;
 }

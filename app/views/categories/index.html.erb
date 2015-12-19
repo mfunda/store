@@ -6,7 +6,7 @@
       <div class='product-table'>
 	      <div class='product'>
 		      <%=link_to category do%>
-		        <%=image_tag category.image_url, class: "radius-l1"%>
+		        <%=image_tag category.avatar.url, class: "radius-l1"%>
 		      <%end%>
 		      <h1><%= category.name %></h1>
 	      </div>

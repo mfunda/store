@@ -26,3 +26,19 @@ $(window).scroll(function () {
 		$('header').css('opacity', '1');
 	}
 });
+
+$(window).scroll( function() { 
+	if($(document).scrollTop().valueOf()!=0){
+		$('#navbutton').css('display', 'inline');
+	}
+});
+
+$(window).scroll(function () {
+	if($(document).scrollTop().valueOf()==0) {
+		$('#navbutton').css('display', 'none');
+	}
+});
+
+function scrollWin() {
+	window.scrollTo(0, 0);
+}

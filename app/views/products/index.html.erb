@@ -1,14 +1,17 @@
 <p id="notice"><%= notice %></p>
+<i id='navbutton' class="fa fa-arrow-circle-up fa-4x" onclick="scrollWin()"></i>
 	<% if signed_in? %>
 		<% if current_user.admin? %>
 			<%= link_to 'Add Product', new_product_path, class: 'price' %>
 		<% end %>
 	<% end %>
 	<%= form_tag products_path, :method => 'get' do %>
+		<%= label_tag 'Find product: ' %>
 		<%= text_field_tag :search, params[:search] %>
 		<%= submit_tag "Search", class: "price" %>
 	<% end %>
 <h1>Listing Products</h1>
+<%= will_paginate @products %>
     <% @products.each do |product| %>
       <div class='product-table'>
 	      <div class='product'>

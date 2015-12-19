@@ -18,7 +18,7 @@ class Product < ActiveRecord::Base
  		if search
  			where(["name LIKE ?", "%#{search}%"])
  		else
- 			all
+ 			all.order("created_at DESC")
  		end
  	end
 end
