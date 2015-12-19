@@ -113,6 +113,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    pg (0.17.1)
     rack (1.6.4)
     rack-pjax (0.8.0)
       nokogiri (~> 1.5)
@@ -138,6 +139,9 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
     rails_admin (0.8.1)
       builder (~> 3.1)
       coffee-rails (~> 4.0)
@@ -152,6 +156,8 @@ GEM
       remotipart (~> 1.0)
       safe_yaml (~> 1.0)
       sass-rails (>= 4.0, < 6)
+    rails_serve_static_assets (0.0.4)
+    rails_stdout_logging (0.0.4)
     railties (4.2.3)
       actionpack (= 4.2.3)
       activesupport (= 4.2.3)
@@ -215,7 +221,9 @@ DEPENDENCIES
   mysql2 (~> 0.3.13)
   owlcarousel-rails
   paperclip (~> 4.3)
+  pg (= 0.17.1)
   rails (= 4.2.3)
+  rails_12factor (= 0.0.2)
   rails_admin
   redis (~> 3.0.1)
   sass-rails (~> 5.0)
