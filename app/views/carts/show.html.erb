@@ -1,0 +1,26 @@
+<div id="mycart">
+    <h4>My Cart</h4>
+    <p> You've selected <span><%=current_user.cart_count%></span> product!</p>
+    <p> Total price: <span><%= @total%></span> $ </p>
+  <% @cart_products.each do |product|%>
+  	<div class='cart-product'>
+      <%=link_to product do%>
+        <%=image_tag product.avatar.url%>
+      <%end%>
+      			<%=link_to "" , class: "price", id: 'remove', data: {targetUrl: remove_from_cart_path(product)} do%>
+	        <i class="fa fa-times fa-2x"></i>
+      <%end%>
+      	<div class='cart-info'>
+	        <p class='cart-name'><strong>Name: </strong> <%= product.name %> </p>
+	        <p class='cart-description'><strong>Description: </strong><%= product.description %> </p>
+	      	<p class='cart-name'><strong>Price: </strong> <%= product.price %> $</p>
+	      	<p class='cart-name'><strong>Categories: </strong> 
+	      		<% product.categories.each do |c| %>
+	      			<%= c.name %>
+	      		<% end %>
+  			</p>
+      </div>
+      </div>
+  <%end%>
+</div>
+

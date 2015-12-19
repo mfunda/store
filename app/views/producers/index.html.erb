@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<% if signed_in? %>
+		<% if current_user.admin? %>
+			<%= link_to 'Add Producer', new_producer_path %>
+		<% end %>
+	<% end %>
+<h1>Listing producers</h1>
+
+    <% @producers.each do |producers| %>
+      <div class='product-table'>
+	      <div class='product'>
+		      <%=link_to producers do%>
+		        <%=image_tag producers.image_url, class: "radius-l1"%>
+		      <%end%>
+		      <h1><%= producers.name %></h1>
+	      </div>
+      </div>
+    <% end %>

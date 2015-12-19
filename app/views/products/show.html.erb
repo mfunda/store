@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<div class='product-img'>
+  <%= image_tag @product.avatar.url %>
+</div>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %> $
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+	<strong>Producer:</strong>
+	<% if !@producer.blank? %>
+	<%= link_to @producer.name, @producer %>
+	<% end %>
+<p>
+  <strong>Categories:</strong>
+  <% @category.each do |c|%>
+  	<%= link_to c.name, c %>
+  <% end %>
+</p>
+<% if signed_in? %>
+  <% if current_user.admin? %>
+    <%= link_to 'Edit', edit_product_path, class: "price" %> |
+  <% end %>
+<% end %>
+
+<%= link_to 'Back', products_path, class: "price" %> |
+<% if signed_in? %>
+	 <%=link_to "", class: "price", data: {target: @cart_action, addUrl: add_to_cart_path(@product), removeUrl: remove_from_cart_path(@product)} do%>
+		<span><%=@cart_action%></span> Cart
+	<% end %>
+<% end %>

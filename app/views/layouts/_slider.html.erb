@@ -1,0 +1,6 @@
+<div class="owl-carousel">
+	<% Product.all.order("created_at DESC").each do |p| %>
+		<%= image_tag p.avatar.url %>
+
+	<% end %>
+</div>

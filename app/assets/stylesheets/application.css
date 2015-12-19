@@ -1,0 +1,191 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require owl.carousel
+ *= require owl.theme
+ */
+
+* {
+	font-family: 'Raleway', sans-serif;
+}
+
+html,body {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	line-height: 17px;
+}
+
+header {
+	background-color: #333333;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 3;
+}
+
+.container {
+	max-width: 1000px;
+	margin: auto;
+	clear: both;
+}
+.container h1{
+	clear: both;
+}
+.navigation {
+	margin: 0;
+	padding: 20px 0;
+}
+
+.navigation ul {
+	display: inline;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: #fff;
+	padding: 10px 20px;
+}
+
+.navigation a:hover {
+	background-color: #3f3f3f;
+}
+
+#home {
+	position: relative;
+	left: 0;
+}
+
+.content {
+	max-width: 1200px;
+	margin: 0 auto;
+	max-height: auto;
+}
+
+footer {
+	background-color: #333333;
+	width: 100%;
+	height: 50px;
+	color: #fff;
+	text-align: right;
+	clear: both;
+}
+
+.product-table {
+	float: left;
+	width: 31%;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+}
+.product {
+	margin: 0px 0px 1rem;
+	padding: 1rem;
+	border: 1px solid rgba(10, 10, 10, 0.25);
+	position: relative;
+	background-color: #FFF;
+
+}
+
+.product img {
+	height: 350px;
+	max-width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.product-img {
+	margin: 0 auto;
+	height: auto;
+	text-align: center;
+}
+
+.product-img img {
+	width: 500px;
+	height: 400px;
+}
+
+.product-img h1{
+	margin: 40px 10px;
+}
+
+.price {
+	border-radius: 3px;
+	display: inline-block;
+	font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+	font-weight: normal;
+	line-height: 1;
+	margin-bottom: auto;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	padding: 5px;
+	font-size: 14px;
+	background-color: #008CBA;
+	color: #FFF;
+}
+
+.item {
+	margin: 25px 10px;
+
+}
+.owl-carousel img{
+	margin-top: 90px;
+    display: block;
+    width: 100%;
+    height: 200px;
+}
+
+#navi {
+	background-color: #333333;
+	text-align: center;
+}
+
+.cart-product {
+	border: 3px solid #333333;
+	border-radius: 6px;
+	clear: both;
+	height: 300px;
+	width: 100%;
+	margin: 20px 0;
+}
+
+.cart-info {
+	float:left;
+}
+.cart-product img{
+	height: 300px;
+	width: 300px;
+	float: left;
+	position: relative;
+	border-radius: 30px;
+}
+
+#remove{
+	float: right;
+}
+
+.prod-belongs {
+	margin: auto;
+	float: left;
+	height: 400px;
+	width: 33.3333%;
+	text-align: center;
+}
+
+.prod-belongs img {
+	height: 300px;
+	width: 300px;
+}

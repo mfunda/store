@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+	<% if signed_in? %>
+		<% if current_user.admin? %>
+			<%= link_to 'Add Product', new_product_path, class: 'price' %>
+		<% end %>
+	<% end %>
+<h1>Listing Products</h1>
+    <% @products.each do |product| %>
+      <div class='product-table'>
+	      <div class='product'>
+		      <%=link_to product do%>
+		        <%=image_tag product.avatar.url, class: "radius-l1"%>
+		      <%end%>
+		      <h1><%= product.name %></h1>
+		      <div class='price'><%= product.price %> $</div>
+		      <strong>Producer: </strong>
+		      <% if !product.producer.blank? %>
+		      <%= link_to product.producer.name, product.producer %>
+		      <% end %>
+	      </div>
+      </div>
+    <% end %>

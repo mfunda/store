@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<%= link_to 'Back', producers_path, class: "price" %>
+<div class='product-img'>
+  <%= image_tag @producer.image_url %>
+</div>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @producer.name %>
+</p>
+<p>
+  <strong>Producer's products:</strong>
+
+  <% @products.each do |p|%>
+	  <div class='prod-belongs'>
+		  <%= link_to p do %>
+		  	<%= image_tag p.avatar.url, class: "radius-l1"%>
+		  <% end %>
+		  <p><strong><%= p.name %></strong></p>
+	  </div>
+  <% end %>
+
+</p>
